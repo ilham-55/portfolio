@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\HeroController;
+use App\Http\Controllers\Admin\AboutMeController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,6 @@ Route::get('dashboard', [AdminController::class, 'index'])->name('admin.dashboar
 Route::get('hero/create', [HeroController::class, 'create'])->name('hero.create');
 Route::post('hero/create', [HeroController::class, 'store'])->name('hero.store');
 Route::get('/', [FrontendController::class, 'index'])->name('admin.dashboard');
+
+Route::get('aboutme/create', [AboutMeController::class, 'create'])->name('aboutme.create');
+Route::post('aboutme/create', [AboutMeController::class, 'store'])->name('aboutme.store');

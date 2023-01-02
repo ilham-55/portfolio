@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Hero;
 use App\Models\AboutMe;
 use Illuminate\Http\Request;
 
-class FrontendController extends Controller
+class AboutMeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +15,7 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        $hero=Hero::latest()->first();
-        $aboutme=AboutMe::latest()->first();
-
-        return view('frontend.layouts.app', compact('hero','aboutme'));
+        //
     }
 
     /**
@@ -29,7 +25,7 @@ class FrontendController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.aboutme.create');
     }
 
     /**
@@ -40,7 +36,19 @@ class FrontendController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        AboutMe::insert([
+            'description' => $request->description,
+            'completed_project' => $request->completed_project,
+            'experienced_year' => $request->experienced_year,
+            'client_number' => $request->client_number,
+            'customer_reviews' => $request->customer_reviews,
+
+
+        ]);
+
+        return back()->with('success', 'Data added Successfully');
     }
 
     /**

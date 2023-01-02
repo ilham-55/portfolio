@@ -6,16 +6,10 @@
         <div class="left-about">
             <h4>Information About me</h4>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Eveniet labore nihil obcaecati consequatur. Debitis error doloremque,
-                vero eos vel nemo eius voluptatem dicta tenetur modi. <br /> <br /> La musica
-                delectus dolore fugiat exercitationem a,
-                ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Harum non necessitatibus deleniti eum soluta.
+               {{@$aboutme->description}}
             </p>
             <div class="btn-con">
-                <a href="#" class="main-btn">
+                <a href="{{ asset('admin/cv')}}/{{ @$hero->cv_file }}" class="main-btn" download>
                     <span class="btn-text">Download CV</span>
                     <span class="btn-icon"><i class="fas fa-download"></i></span>
                 </a>
@@ -24,25 +18,25 @@
         <div class="right-about">
             <div class="about-item">
                 <div class="abt-text">
-                    <p class="large-text">650+</p>
+                    <p class="large-text">{{ @$aboutme->completed_project}}</p>
                     <p class="small-text">Projects <br /> Completed</p>
                 </div>
             </div>
             <div class="about-item">
                 <div class="abt-text">
-                    <p class="large-text">10+</p>
+                    <p class="large-text">{{@$aboutme->experienced_year}}</p>
                     <p class="small-text">Years of <br /> experience</p>
                 </div>
             </div>
             <div class="about-item">
                 <div class="abt-text">
-                    <p class="large-text">300+</p>
+                    <p class="large-text">{{@$aboutme->client_number}}</p>
                     <p class="small-text">Happy <br /> Clients</p>
                 </div>
             </div>
             <div class="about-item">
                 <div class="abt-text">
-                    <p class="large-text">400+</p>
+                    <p class="large-text">{{@$aboutme->customer_reviews}}</p>
                     <p class="small-text">Customer <br /> reviews</p>
                 </div>
             </div>

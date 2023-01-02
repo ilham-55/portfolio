@@ -14,7 +14,7 @@
                {{ @$hero->description }}
             </p>
             <div class="btn-con">
-                <a href="{{ asset('admin/cv')}}/{{ @$hero->cv_file }}" class="main-btn" downlode>
+                <a href="{{ asset('admin/cv')}}/{{ @$hero->cv_file }}" class="main-btn" download>
                     <span class="btn-text">Download CV</span>
                     <span class="btn-icon"><i class="fas fa-download"></i></span>
                 </a>
