@@ -75,22 +75,20 @@
                 </div>
             </div>
             <div class="right-contact">
-                <form action="" class="contact-form">
+                <form action="{{ route('send.mail') }}" method="POST" class="contact-form">
+                @csrf
                     <div class="input-control i-c-2">
-                        <input type="text" required placeholder="YOUR NAME">
-                        <input type="email" required placeholder="YOUR EMAIL">
+                        <input type="text" name="name" required placeholder="YOUR NAME">
+                        <input type="email" name="email" required placeholder="YOUR EMAIL">
                     </div>
                     <div class="input-control">
-                        <input type="text" required placeholder="ENTER SUBJECT">
+                        <input type="text" name="subject" required placeholder="ENTER SUBJECT">
                     </div>
                     <div class="input-control">
-                        <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                        <textarea name="content" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
                     </div>
                     <div class="submit-btn">
-                        <a href="#" class="main-btn">
-                            <span class="btn-text">Download CV</span>
-                            <span class="btn-icon"><i class="fas fa-download"></i></span>
-                        </a>
+                        <button type="submit" >Submit</button>
                     </div>
                 </form>
             </div>

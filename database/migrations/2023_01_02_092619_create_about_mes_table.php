@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('about_mes', function (Blueprint $table) {
             $table->id();
             $table->string('description')->nullable();
-            $table->string('completed_project')->nullable();
+            $table->string('compaleted_project')->nullable();
             $table->string('experienced_year')->nullable();
             $table->string('client_number')->nullable();
-            $table->string('customer_reviews')->nullable();
+            $table->string('customer_project')->nullable();
             $table->timestamps();
         });
     }

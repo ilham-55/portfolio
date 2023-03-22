@@ -6,138 +6,43 @@
         Here is some of my work that I've done in various programming languages.
     </p>
     <div class="portfolios">
+
+    @foreach ($portfolios as $portfolio)
         <div class="portfolio-item">
             <div class="image">
-                <img src="{{ asset('frontend') }}/img/port1.jpg" alt="">
+                <img src="{{ asset('')}}{{ @$portfolio->image }}" alt="">
             </div>
             <div class="hover-items">
                 <h3>Project Source</h3>
                 <div class="icons">
-                    <a href="#" class="icon">
+                    <a href="{{ @$portfolio->git_link}}" class="icon">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="#" class="icon">
+                    <a href="{{@$portfolio->behance_link}}" class="icon">
                         <i class="fab fa-behance"></i>
                     </a>
-                    <a href="#" class="icon">
+                    <a href="{{@$portfolio->youtube_link}}" class="icon">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="{{ asset('frontend') }}/img/port2.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="{{ asset('frontend') }}/img/port3.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="{{ asset('frontend') }}/img/port4.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="{{ asset('frontend') }}/img/port5.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="{{ asset('frontend') }}/img/port2.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="{{ asset('frontend') }}/img/port7.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+        @endforeach
+       
+       
+       
+       
+       
+        
+    
+    
+    
+
+
+
+
+
+
+
     </div>
 </section>

@@ -14,10 +14,10 @@
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="bx bx-calendar"></i>
-                <span key="t-dashboards">Calendars</span>
+                <span key="t-dashboards">Portfolio</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="calendar.html" key="t-tui-calendar">TUI Calendar</a></li>
+                <li><a href="{{URL::to('/portfolio/create')}}">PortfolioCreate</a></li>
                 <li><a href="calendar-full.html" key="t-full-calendar">Full Calendar</a></li>
             </ul>
         </li>

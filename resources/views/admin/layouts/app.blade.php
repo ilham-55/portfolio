@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="main-content">
-    @yield('content')
+        @yield('content')
     </div>
     @include('admin.partials.footer')
 </div>
